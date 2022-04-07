@@ -1297,7 +1297,7 @@ class Address(object):
             logging.error(msg)
             self.pywaves.throw_error(msg)
         else:
-            timestamp = int(time.time() * 1000)
+            timestamp = int((time.time()-7200) * 1000)
             parameterBytes = b''
             for param in params:
                 if param['type'] == 'integer':
